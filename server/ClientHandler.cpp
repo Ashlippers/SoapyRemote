@@ -91,7 +91,8 @@ bool SoapyClientHandler::handleOnce(SoapyRPCUnpacker &unpacker, SoapyRPCPacker &
 {
     SoapyRemoteCalls call;
     unpacker & call;
-
+    SoapySDR::logf(SOAPY_SDR_INFO, "SoapyClientHandler::handleOnce call = %s", 
+        SoapyRemoteCallsName[call].c_str());
     switch (call)
     {
 
